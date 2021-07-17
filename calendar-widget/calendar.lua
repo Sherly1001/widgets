@@ -225,6 +225,10 @@ local function worker(user_args)
         end
     end
 
+    popup:connect_signal('mouse::leave', function(c)
+        popup.visible = false
+    end)
+
     return calendar_widget
 end
 

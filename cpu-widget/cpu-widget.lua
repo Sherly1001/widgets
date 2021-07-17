@@ -314,6 +314,10 @@ local function worker(user_args)
         end)
     end)
 
+    popup:connect_signal('mouse::leave', function(c)
+        popup.visible = false
+    end)
+
     return cpu_widget
 end
 
